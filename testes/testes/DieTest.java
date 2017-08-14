@@ -91,7 +91,7 @@ public class DieTest {
 		
 		Integer number = new Integer(6);
 		assertEquals(false, sixSidesDie.equals(null));
-		assertEquals(true, sixSidesDie.equals(sixSidesDie));
+		assertEquals(true, sixSidesDie.equals(sixSidesDie)); 
 		assertEquals(false, sixSidesDie.equals(number));
 	}
 
@@ -106,12 +106,23 @@ public class DieTest {
 		assertEquals("Num sides 7 result 6",dieResult2.toString());
 	}
 
-//	@Test
-//	public void testDies() {
-//		
-//		Die die = new Die();
-//		die.getResult();
-//	}
+	@Test
+	public void testRollingDies() {
+		
+		Die diceBlue = new Die(10, 8);
+		Die diceRed = new Die(10, 6);
+		
+		int resultDiceBlue = diceBlue.roll();
+		int resultDiceRed = diceRed.roll();
+		
+		if (resultDiceBlue > resultDiceRed) {
+			assertEquals(true, diceBlue.getResult() > diceRed.getResult());
+		} else if (resultDiceBlue < resultDiceRed) {
+			assertEquals(false, diceBlue.getResult() > diceRed.getResult());
+		} else {
+			assertEquals(true, diceBlue.equals(diceRed));
+		}
+	}
 	
 //	@Test(expected = AssertionError.class)
 //	public void testDieError() {
