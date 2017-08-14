@@ -51,7 +51,7 @@ public class Die {
     	assert numSides > 1 && 1 <= result && result <= numSides : "Violation of precondition";
         iMyNumSides = numSides;
         iMyResult = result;
-    }
+    } 
 
 
     /**
@@ -64,7 +64,6 @@ public class Die {
     	iMyResult = ourRandNumGen.nextInt(iMyNumSides) + 1;
         return iMyResult;
     }
-
 
     /**
      * return how many sides this Die has<p>

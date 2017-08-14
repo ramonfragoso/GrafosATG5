@@ -21,11 +21,14 @@ public class DieTest {
 	@Before
 	public void setUp() throws Exception {
 		
-		 die1 = new Die();
-		 die2 = new Die();
+		die1 = new Die();
+		die2 = new Die();
+		
+		dieNumSides1 = new Die(15);
+		dieNumSides2 = new Die(3);
 		 
-		 dieNumSides1 = new Die(15);
-		 dieNumSides2 = new Die(3);
+		dieResult1 = new Die(4, 3);
+		dieResult2 = new Die(5, 4);
 	}
 
 	@Test
@@ -55,6 +58,12 @@ public class DieTest {
 	@Test
 	public void testDieIntInt() {
 		
+		
+//		assertEquals(15, dieResult1.getNumSides());
+//		assertEquals(3, dieResult2.getNumSides()); 
+//		
+//		assertEquals(1, dieResult1.getResult()); 
+//		assertEquals(1, dieResult2.getResult()); 
 	}
 
 //	@Test
