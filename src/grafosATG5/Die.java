@@ -8,7 +8,7 @@ import java.util.Random;
  *
  * @author Summer CS 307 class
  */
-public class Die {
+public class Die { 
 
 	public static final int DEFAULT_SIDES = 6;
 	private static Random ourRandNumGen = new Random();

@@ -19,6 +19,7 @@ public class DieTest {
 	Die dieResult2;
 	
 	Die dieNumSidesError;
+	Die dieResultError;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -36,6 +37,8 @@ public class DieTest {
 	@Test
 	public void testDie() {
 		 
+		Die die = new Die();
+		
 		assertEquals(6, die1.DEFAULT_SIDES);
 		assertEquals(6, die2.DEFAULT_SIDES);		
 	}
@@ -105,32 +108,14 @@ public class DieTest {
 		assertEquals("Num sides 10 result 8",dieResult1.toString());
 		assertEquals("Num sides 7 result 6",dieResult2.toString());
 	}
-
-	@Test
-	public void testRollingDies() {
-		
-		Die diceBlue = new Die(10, 8);
-		Die diceRed = new Die(10, 6);
-		
-		int resultDiceBlue = diceBlue.roll();
-		int resultDiceRed = diceRed.roll();
-		
-		if (resultDiceBlue > resultDiceRed) {
-			assertEquals(true, diceBlue.getResult() > diceRed.getResult());
-		} else if (resultDiceBlue < resultDiceRed) {
-			assertEquals(false, diceBlue.getResult() > diceRed.getResult());
-		} else {
-			assertEquals(true, diceBlue.equals(diceRed));
-		}
-	}
 	
 //	@Test(expected = AssertionError.class)
 //	public void testDieError() {
 //		
-//		dieNumSidesError = new Die(1);
+//		assertEquals(AssertionError.class, dieNumSidesError = new Die(1));
 //		dieNumSidesError = new Die(-1);
-//	
-//		dieNumSidesError = new Die(1);
-//		dieNumSidesError = new Die(-1);
+//		
+//		dieResultError = new Die(1, 1);
+//		dieResultError = new Die(10, 1);
 //	}
 }
